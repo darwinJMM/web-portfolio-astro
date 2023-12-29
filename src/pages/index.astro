@@ -5,10 +5,11 @@ import Social from '../components/social/Social.astro';
 import Skill from '../components/skill/Skill.astro';
 import Experience from '../components/experience/Experience.astro';
 import Projects from '../components/projects/Projects.astro';
+import CodeSource from '../components/code-svg/CodeSource.astro';
 
 const pageTitle = "Pagina de inicio";
 const project = 'Project Experience'
-const srcImageYellow = '../src/assets/img/developer-yellow.png'
+const srcImageYellow = '../../src/assets/img/developer-yellow.png'
 const opacity = 'opacity-70'
 const contentImg = 'Darwin Mendoza Mercado developer'
 const title = 'Projecto radicando'
@@ -42,7 +43,10 @@ const title = 'Projecto radicando'
  </section>
  <section class="section-projects">
   <div class="slider_container flex flex-col justify-start items-center w-3/4 m-auto pt-56">
-    <h2 class="text-5xl mb-20 border-dashed border-2 border-sky-500 p-2">{ project }</h2>
+    <h2 class="text-5xl mb-20 flex gap-3 items-center border-dashed border-2 border-sky-500 p-2">
+      <CodeSource class="sise-10" />
+      { project }
+    </h2>
     <Projects title={ title } />
   </div>
  </section>
