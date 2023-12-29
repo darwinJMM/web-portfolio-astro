@@ -2,24 +2,71 @@
 const projects = [
   {
     title: "Project web app Radicando",
-    description: "Web App Radicando is an Angular-based web application designed to be responsive across all devices. It facilitates various vehicle-related transactions such as vehicle transfer, registration alerts, and duplicate plate issuance. Through this application, users can seamlessly request any of these processes and conveniently make payments via an integrated payment gateway.",
+    description:
+      "Web App Radicando is an Angular-based web application designed to be responsive across all devices. It facilitates various vehicle-related transactions such as vehicle transfer, registration alerts, and duplicate plate issuance. Through this application, users can seamlessly request any of these processes and conveniently make payments via an integrated payment gateway.",
     link: "qa.webapp.radicando",
     github: "#",
-    image: "src/assets/img/qa-webapp2.png",
+    image: "/src/assets/img/qa-webapp2.png",
+    tags: ["Angular", "Bootstrap", "Github"],
+  },
+
+  {
+    title: "Radicando BackOffice",
+    description:
+      "Backoffice Radicando is a dedicated web application designed for streamlined management of initial plate registrations. It efficiently handles customer registrations, maintains records for companies, branches, and tariff structures, simplifying administrative tasks related to vehicle registration processes.",
+    link: "qa.webapp.radicando",
+    github: "#",
+    image: "/src/assets/img/qa-backoffice.png",
+    tags: ["Angular", "Bootstrap", "Github"],
+  },
+
+  {
+    title: "Project Prinox",
+    description:
+      "Prinox Web App is a dynamic platform dedicated to providing printing services. Tailored to meet the diverse needs of its users, this application offers a seamless experience for ordering and customizing print materials. From business cards to promotional materials, Prinox simplifies the printing process, ensuring high-quality results and client satisfaction.",
+    link: "qa.webapp.radicando",
+    github: "#",
+    image: "/src/assets/img/qa-webapp-prinox.png",
+    tags: ["Angular", "Bootstrap", "Github"],
+  },
+
+  {
+    title: "Project APpStore",
+    description:
+      "Prinox Web App is a dynamic platform dedicated to providing printing services. Tailored to meet the diverse needs of its users, this application offers a seamless experience for ordering and customizing print materials. From business cards to promotional materials, Prinox simplifies the printing process, ensuring high-quality results and client satisfaction.",
+    link: "qa.webapp.radicando",
+    github: "#",
+    image: "/src/assets/img/qa-webapp-store.png",
     tags: ["Angular", "Bootstrap", "Github"],
   },
 ];
-
 ---
 
-{ projects.map(({title, description, link, github, image, tags}) => (
-  <article>
-    <h3 class="text-5xl mb-2">Projects</h3>
-    <h2 class="text-2xl mb-2">{ title }</h2>
-    <p class="text-pretty text-1xl">{ description }</p>
-    <ul class="flex gap-4 my-3">
-      { tags.map( tags => <li>{ tags }</li> ) }
-    </ul>
-    <img class="rounded-lg" src={ image } alt={ `Captura de pantalla del proyecto ${image}` } />
-  </article>
-)) }
+<div class="container-project flex flex-wrap gap-5">
+  {
+    projects.map(({ title, description, link, github, image, tags }) => (
+      <article>
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <img class="rounded-t-lg" src={image} alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {title}
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-pretty">
+              {description}
+            </p>
+            <ul class="flex gap-3">
+              {tags.map((tasgList) => (
+                <li> {tasgList} </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

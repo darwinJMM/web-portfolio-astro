@@ -7,8 +7,8 @@ import Experience from '../components/experience/Experience.astro';
 import Projects from '../components/projects/Projects.astro';
 
 const pageTitle = "Pagina de inicio";
-const srcImage = 'src/assets/img/developer.png'
-const srcImageYellow = 'src/assets/img/developer-yellow.png'
+const project = 'Project Experience'
+const srcImageYellow = '/src/assets/img/developer-yellow.png'
 const opacity = 'opacity-70'
 const contentImg = 'Darwin Mendoza Mercado developer'
 const title = 'Projecto radicando'
@@ -41,8 +41,9 @@ const title = 'Projecto radicando'
   </div>
  </section>
  <section class="section-projects">
-  <div class="slider_container flex justify-start items-center w-3/4 m-auto pt-56">
-    <Projects title={title} />
+  <div class="slider_container flex flex-col justify-start items-center w-3/4 m-auto pt-56">
+    <h2 class="text-5xl mb-20 border-dashed border-2 border-sky-500 p-2">{ project }</h2>
+    <Projects title={ title } />
   </div>
  </section>
 </BaseLayout>
