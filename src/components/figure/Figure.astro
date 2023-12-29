@@ -1,0 +1,13 @@
+---
+const { img, alt, opacity } = Astro.props;
+---
+
+<figure class="h-automt-4">
+  <img class=`${opacity} shadow-slate-800 shadow-lg` src={img} alt={alt} />
+</figure>
+
+<style>
+  img {
+    border-radius: 50%;
+  }
+</style>

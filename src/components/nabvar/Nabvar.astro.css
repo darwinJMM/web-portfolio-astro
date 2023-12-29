@@ -1,0 +1,8 @@
+.itemsNavbar {
+  padding: 0.3rem;
+}
+
+.itemsNavbar:hover {
+  background-color: #ff0404b2;
+  transition: all 0.3s ease;
+}

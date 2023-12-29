@@ -1,0 +1,11 @@
+---
+import './Nabvar.astro.css';
+
+const menu = [
+  "Home","Experience","Projects","About me","Contact me"
+]
+---
+
+<nav class="flex justify-around items-center text-center w-1/2">
+  { menu.map(menuList => <a class="flex-1 itemsNavbar rounded text-lg" href="#Experience">{menuList}</a>) }
+</nav>

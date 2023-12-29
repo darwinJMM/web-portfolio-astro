@@ -1,0 +1,25 @@
+---
+const projects = [
+  {
+    title: "Project web app Radicando",
+    description: "Web App Radicando is an Angular-based web application designed to be responsive across all devices. It facilitates various vehicle-related transactions such as vehicle transfer, registration alerts, and duplicate plate issuance. Through this application, users can seamlessly request any of these processes and conveniently make payments via an integrated payment gateway.",
+    link: "qa.webapp.radicando",
+    github: "#",
+    image: "src/assets/img/qa-webapp2.png",
+    tags: ["Angular", "Bootstrap", "Github"],
+  },
+];
+
+---
+
+{ projects.map(({title, description, link, github, image, tags}) => (
+  <article>
+    <h3 class="text-5xl mb-2">Projects</h3>
+    <h2 class="text-2xl mb-2">{ title }</h2>
+    <p class="text-pretty text-1xl">{ description }</p>
+    <ul class="flex gap-4 my-3">
+      { tags.map( tags => <li>{ tags }</li> ) }
+    </ul>
+    <img class="rounded-lg" src={ image } alt={ `Captura de pantalla del proyecto ${image}` } />
+  </article>
+)) }

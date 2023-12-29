@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Figure from "../components/figure/Figure.astro";
+import Social from '../components/social/Social.astro';
+import Skill from '../components/skill/Skill.astro';
+import Experience from '../components/experience/Experience.astro';
+import Projects from '../components/projects/Projects.astro';
+
+const pageTitle = "Pagina de inicio";
+const srcImage = 'src/assets/img/developer.png'
+const srcImageYellow = 'src/assets/img/developer-yellow.png'
+const opacity = 'opacity-70'
+const contentImg = 'Darwin Mendoza Mercado developer'
+const title = 'Projecto radicando'
+---
+
+<BaseLayout pageTitle={pageTitle}>
+ <div class="slider pt-40">
+  <div class="slider_container flex justify-between items-center w-3/4 m-auto ">
+    <div class="slider_container-content flex flex-col">
+      <div>
+        <small class="text-5xl">I am</small>
+        <h1 class="text-7xl"> <span class="text-red-700">Darwin</span> Jun<span class="text-amber-400">i</span><span class="text-red-600">o</span>r</h1>
+        <span class="text-5xl">Frontend junior <span class="text-amber-400">developer</span></span>
+      </div>
+      <div class="flex gap-5 mt-4">
+        <Skill />
+      </div>
+      <div class="flex flex-col right-3 gap-5 mt-4 fixed">
+        <Social platform="Twitter"/>
+        <Social platform="Instagram" />
+        <Social platform="Linkedin" />
+      </div>
+    </div>
+    <Figure opacity={ opacity } img={ srcImageYellow} alt={ contentImg } />
+  </div>
+ </div>
+ <section class="section-experience">
+  <div class="slider_container flex justify-center items-center w-3/4 m-auto pt-56">
+    <Experience />
+  </div>
+ </section>
+ <section class="section-projects">
+  <div class="slider_container flex justify-start items-center w-3/4 m-auto pt-56">
+    <Projects title={title} />
+  </div>
+ </section>
+</BaseLayout>
