@@ -6,6 +6,7 @@ import Skill from '../components/skill/Skill.astro';
 import Experience from '../components/experience/Experience.astro';
 import Projects from '../components/projects/Projects.astro';
 import CodeSource from '../components/code-svg/CodeSource.astro';
+import DevYellow from '../components/code-svg/DevYellow.astro';
 
 const pageTitle = "Pagina de inicio";
 const project = 'Project Experience'
@@ -33,7 +34,9 @@ const title = 'Projecto radicando'
         <Social platform="Linkedin" />
       </div>
     </div>
-    <Figure opacity={ opacity } img={ srcImageYellow} alt={ contentImg } />
+    <Figure>
+      <DevYellow />
+    </Figure>
   </div>
  </div>
  <section class="section-experience">
