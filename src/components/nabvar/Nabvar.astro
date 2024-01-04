@@ -18,6 +18,6 @@ const menu = ["Home", "Experience", "Projects", "About me", "Contact me"];
     </span>
   </div>
   <ul class=" hidden transition-all ease-in duration-500 right-0 left-0 md:flex md:items-center md:justify-between md:static absolute">
-    {menu.map(listMenu => <li class="text-[1.1rem] hover:text-rose-600 py-4 md:py-0 duration-75 mx-4 my-7 md:my-0 text-center"> <a href="#">{ listMenu }</a></li>)}
+    {menu.map((listMenu) => <li class="text-[1.1rem] hover:text-rose-600 py-4 md:py-0 duration-75 mx-4 my-7 md:my-0 text-center"> <a href={"#" + listMenu}>{ listMenu }</a></li>)}
   </ul>
 </nav>
