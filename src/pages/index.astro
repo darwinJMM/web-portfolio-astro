@@ -13,7 +13,7 @@ const title = 'Projecto radicando';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
- <div class="slider">
+ <div class="slider" id="Home">
   <div class="slider_container flex justify-center items-center w-3/4 m-auto py-[16rem]">
     <div class="slider_container-content text-center md:text-left flex flex-col">
       <div>
@@ -27,20 +27,29 @@ const title = 'Projecto radicando';
     </div>
   </div>
  </div>
- <section class="section-experience">
+ <section class="section-experience" id="Experiencie">
   <div class="slider_container flex flex-col gap-5 justify-center items-center w-3/4 m-auto pt-56">
     <Experience />
   </div>
  </section>
  <section class="section-projects pb-56">
   <div class="slider_container flex flex-col justify-start items-center w-3/4 m-auto pt-56">
-    <h2 class="text-4xl md:text-5xl mb-20 flex gap-3 items-center border-dashed border-2 border-sky-500 p-2">
+    <h2 id="Projects" class="text-4xl md:text-5xl mb-20 flex gap-3 items-center border-dashed border-2 border-sky-500 p-2">
       <CodeSource class="size-10" />
       { project }
     </h2>
     <Projects title={ title } />
   </div>
  </section>
- <AboutMe />
- <Contact />
+ <div id="About me">
+   <AboutMe />
+ </div>
+ <div id="Contact me">
+   <Contact />
+ </div>
+ <span class="fixed right-[0.1rem] bottom-2 md:right-5 md:bottom-5">
+  <a href="#Home" class="text-5xl text-slate-400">
+    <ion-icon name="arrow-up-circle-outline" href="#Home"></ion-icon>
+  </a>
+ </span>
 </BaseLayout>
